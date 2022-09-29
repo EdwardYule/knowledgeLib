@@ -2,6 +2,7 @@
   "name": "knowledgelib",
   "version": "0.0.0",
   "scripts": {
+    "start": "npm run dev",
     "dev": "vite",
     "build": "run-p type-check build-only",
     "preview": "vite preview --port 4173",
@@ -9,7 +10,10 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "@tinymce/tinymce-vue": "^4.0.7",
+    "element-plus": "^2.2.16",
     "pinia": "^2.0.21",
+    "tinymce": "^6.2.0",
     "vue": "^3.2.38",
     "vue-router": "^4.1.5"
   },
@@ -19,6 +23,7 @@
     "@vitejs/plugin-vue-jsx": "^2.0.1",
     "@vue/tsconfig": "^0.1.3",
     "npm-run-all": "^4.1.5",
+    "sass": "^1.55.0",
     "typescript": "~4.7.4",
     "vite": "^3.0.9",
     "vue-tsc": "^0.40.7"
