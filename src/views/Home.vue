@@ -1,13 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-const list = ref([
-  {
-    name: "小明",
-    idCard: "132456",
-  }
-]);
+const list = ref([]);
 const getList = () => {
-  console.log('ddd');
+  fetch('/api/personList').then(res => res.json()).then(({ code, data }) => {
+    list.value = data;
+  })
 }
 </script>
 
@@ -23,10 +20,11 @@ const getList = () => {
 </template>
 
 <style scoped lang="scss">
-.title{
+.title {
   text-align: center;
 }
-.operations{
+
+.operations {
   display: flex;
   justify-content: center;
 }
